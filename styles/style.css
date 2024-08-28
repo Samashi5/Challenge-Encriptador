@@ -1,0 +1,168 @@
+body {
+    background: #f3f5fc;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 2rem; /* Tamaño relativo para el texto base */
+    line-height: 1.5; /* Line-height relativo */
+    max-width: 100%; /* Elimina el ancho fijo */
+    height: auto; /* Ajusta la altura automáticamente */
+    padding: 0 1rem; /* Espacio alrededor del contenido en móviles */
+}
+
+.Logo {
+    padding-top: 1rem;
+    margin-left: 1rem;
+    width: 15%; /* Ancho relativo */
+    max-width: 150px; /* Máximo ancho para evitar que crezca demasiado */
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en líneas */
+    gap: 1.5rem; /* Espacio entre elementos */
+    margin-bottom: 3rem;
+    margin-left: 0;
+    justify-content: center; /* Centra los elementos en la línea */
+}
+
+.text-area {
+    border: none;
+    color: #F9DBBA;
+    margin-top: 4rem; /* Espacio superior ajustado */
+    text-transform: lowercase;
+    width: 80%; /* Ancho relativo */
+    max-width: 680px; /* Máximo ancho */
+    height: 15rem; /* Altura relativa */
+}
+
+::placeholder {
+    color: #0A3871;
+}
+
+.text-area:focus {
+    outline: none;
+}
+
+.informacion {
+    font-size: 1rem; /* Tamaño relativo */
+    color: #666;
+    margin-top: 2rem; /* Ajusta la distancia del texto al textarea */
+    pointer-events: none;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan */
+    gap: 1rem; /* Espacio entre botones */
+    margin-top: 3rem;
+    justify-content: center; /* Centra los botones horizontalmente */
+}
+
+.btn-encriptar, .btn-desencriptar {
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    height: 4rem; /* Altura relativa */
+    width: 80%; /* Ancho relativo */
+    max-width: 328px; /* Máximo ancho */
+    color: #0A3871;
+    font-size: 1.125rem; /* Tamaño de fuente relativo */
+}
+
+.btn-encriptar {
+    background-color: #6482AD;
+    color: #f7f7f7;
+}
+
+.btn-desencriptar {
+    background-color: #a2beed;
+}
+
+.rectangulo-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%; /* Ancho relativo */
+    max-width: 400px; /* Máximo ancho */
+    height: auto; /* Ajusta la altura automáticamente */
+    background-color: #F9DBBA;
+    border: 1px solid #010913;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto; /* Centra el contenedor y da espacio superior e inferior */
+}
+
+.imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.titulo {
+    margin: 2rem 0 1rem 0;
+    font-size: 1.5rem; /* Tamaño relativo */
+    color: #0A3871;
+    text-align: center;
+    font-weight: 700;
+}
+
+.texto {
+    font-size: 1rem; /* Tamaño relativo */
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Media queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .rectangulo-contenedor {
+        width: 95%; /* Ajuste del ancho en tablets */
+        padding: 1.5rem;
+    }
+
+    .text-area {
+        width: 95%;
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        width: 90%;
+    }
+
+    .titulo {
+        font-size: 1.25rem; /* Reduce el tamaño del título en tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 1.5rem; /* Ajusta el tamaño del texto base para móviles */
+    }
+
+    .Logo {
+        width: 20%; /* Ajuste del logo en móviles */
+    }
+
+    .rectangulo-contenedor {
+        width: 100%; /* Uso completo del ancho de pantalla */
+        padding: 1rem;
+    }
+
+    .text-area {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        width: 100%;
+        font-size: 1rem; /* Ajuste del tamaño del texto de los botones */
+    }
+
+    .titulo {
+        font-size: 1rem; /* Ajuste del tamaño del título en móviles */
+    }
+
+    .informacion {
+        font-size: 0.875rem; /* Ajuste del tamaño del texto de información en móviles */
+    }
+}
